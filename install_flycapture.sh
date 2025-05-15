@@ -44,7 +44,7 @@ echo "Would you like to add a udev entry to allow access to IEEE-1394 and USB ha
 echo "If this is not ran then your cameras may be only accessible by running flycap as sudo.";
 echo -n "$MY_YESNO_PROMPT"
 #read confirm
-confirm="y"
+confirm="n"
 
 if [ $confirm = "n" ] || [ $confirm = "N" ] || [ $confirm = "no" ] || [ $confirm = "No" ]
 then
