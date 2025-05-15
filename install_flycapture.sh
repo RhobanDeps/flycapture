@@ -17,7 +17,8 @@ RELEASE_TYPE_TEXT=Release
 echo "This is a script to assist with installation of the FlyCapture2 SDK.";
 echo "Would you like to continue and install all the FlyCapture2 SDK packages?";
 echo -n "$MY_YESNO_PROMPT"
-read confirm
+#read confirm
+confirm="y"
 
 if [ $confirm = "n" ] || [ $confirm = "N" ] || [ $confirm = "no" ] || [ $confirm = "No" ]
 then
@@ -29,20 +30,21 @@ echo
 
 echo "Installing FlyCapture2 packages...";
 
-sudo dpkg -i libflycapture-2*
-sudo dpkg -i libflycapturegui-2*
-sudo dpkg -i libflycapture-c-2*
-sudo dpkg -i libflycapturegui-c-2*
-sudo dpkg -i libmultisync-2*
-sudo dpkg -i libmultisync-c-2*
-sudo dpkg -i flycap-2*
-sudo dpkg -i flycapture-doc-2*
-sudo dpkg -i updatorgui*
+yes | sudo dpkg -i libflycapture-2*
+yes | sudo dpkg -i libflycapturegui-2*
+yes | sudo dpkg -i libflycapture-c-2*
+yes | sudo dpkg -i libflycapturegui-c-2*
+yes | sudo dpkg -i libmultisync-2*
+yes | sudo dpkg -i libmultisync-c-2*
+yes | sudo dpkg -i flycap-2*
+yes | sudo dpkg -i flycapture-doc-2*
+yes | sudo dpkg -i updatorgui*
 
 echo "Would you like to add a udev entry to allow access to IEEE-1394 and USB hardware?";
 echo "If this is not ran then your cameras may be only accessible by running flycap as sudo.";
 echo -n "$MY_YESNO_PROMPT"
-read confirm
+#read confirm
+confirm="y"
 
 if [ $confirm = "n" ] || [ $confirm = "N" ] || [ $confirm = "no" ] || [ $confirm = "No" ]
 then
